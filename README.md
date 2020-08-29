@@ -19,5 +19,5 @@ If you get an error, first run
 <code> npm install </code> in terminal in the same folder, and then run
 <code> npm start </code> to start the development server
   
-# Dependency:
+### Dependency:
 [Install Node](https://node.org/)
