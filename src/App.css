@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Anton&family=Do+Hyeon&family=Kanit&family=Russo+One&display=swap');
+body {
+	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+	font-family: 'Alata', sans-serif;
+	font-size: 12px;
+}
+
+.container {
+	margin: 2rem 2rem;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	border-radius: 3%;
+	font-family: 'Kanit', sans-serif;
+
+	background-color: #f3a683;
+	padding: 0 1.5rem;
+	box-shadow: 1px 3px 3px 3px rgba(83, 62, 62, 0.4);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin: .5rem;
+	font-family: 'Kanit', sans-serif;
+}
+
+.form-group > label {
+	color: rgb(10, 7, 7);
+	font-size: 1rem;
+	margin-bottom: .45rem;
+}
+
+.btn {
+	background-color: #00d8d6;
+	color: rgb(58, 45, 38);
+	padding: .5em 1em;
+	border-radius: .3em;
+	border: none;
+	cursor: pointer;
+	font-family: 'Do Hyeon', sans-serif;
+	box-shadow: .4px .2px 0px 3px rgba(83, 62, 62, 0.2);
+}
+
+.btn:hover {
+	background-color: #6cb6b3;
+}
+
+.card-grid {
+	display: grid;
+
+	align-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 1rem;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border-radius: .45rem;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+	background-color: #f3e2b6;
+	transform-style: preserve-3d;
+	transition: 340ms;
+	cursor: pointer;
+	transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+}
+
+.card:hover {
+	--translate-y: -2px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+
+.card.flip {
+	--rotate-y: 180deg;
+}
+
+.card .front {
+	left: 0;
+}
+
+.card .front,
+.card .back {
+	position: absolute;
+	padding: 1rem;
+	backface-visibility: hidden;
+}
+
+.card .back {
+	transform: rotateY(180deg);
+}
+
+.flashcard-options {
+	margin-top: .5rem;
+}
+
+.flashcard-option {
+	margin-top: .25rem;
+	color: #555;
+	font-size: .75rem;
+}
+
+.flashcard-option:first-child {
+	margin-top: 0;
+}
